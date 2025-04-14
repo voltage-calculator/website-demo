@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voltage Calculator Tool</title>
+
+  <!-- Font for the result box -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="glass-box">
+    <h1>Voltage Calculator Tool</h1>
+
+    <label>Supply Voltage (V):</label>
+    <input type="number" id="Vs" placeholder="Enter supply voltage">
+
+    <label>Impedance per unit length (format: R+jX, e.g., 0.05+0.1):</label>
+    <input type="text" id="zperunit" placeholder="Enter impedance (R+jX)">
+
+    <h2>Load Points</h2>
+    <div id="loadInputs"></div>
+    <button onclick="addLoadPoint()">➕ Add Load Point</button>
+    <br><br>
+    <button onclick="calculate()">🔍 Calculate Voltages</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
